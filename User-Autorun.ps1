@@ -61,10 +61,10 @@ Read-Host -Prompt "Press ENTER to continue..."
 ### Update Choco Apps
 Write-Host "Adding a scheduled task for Choco Upgrade"
 $Trigger=New-ScheduledTaskTrigger -AtLogOn
-$User= “NT AUTHORITY\SYSTEM”
+$User= "NT AUTHORITY\SYSTEM"
 $Settings=New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries
-$Action= New-ScheduledTaskAction -Execute “PowerShell.exe” -Argument “-ExecutionPolicy ByPass choco upgrade -y all”
-Register-ScheduledTask -TaskName “Choco Upgrade” -Trigger $Trigger -User $User -Action $Action -Settings $Settings –Force
+$Action= New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-ExecutionPolicy ByPass choco upgrade -y all"
+Register-ScheduledTask -TaskName "Choco Upgrade" -Trigger $Trigger -User $User -Action $Action -Settings $Settings –Force
 Write-Host "Task Created!"
 Start-Sleep -Seconds 1
 
@@ -102,8 +102,8 @@ Invoke-Expression $Code
 New-Item "C:\Program Files\Irunner\$user" -ItemType Directory
 New-Item "C:\Program Files\Irunner\$user\ident.txt" -ItemType File -Value "$user $ident"
 git config --global push.autoSetupRemote true
-git config --global user.email "phong.phu@dision.tech"
-git config --global user.name "dxu3s83"
+git config --global user.email "us@dynexo.de"
+git config --global user.name "dxu353"
 git init
 git checkout -b $user
 git add "C:\Program Files\Irunner\$user\ident.txt"
