@@ -81,7 +81,7 @@ Write-Host "Choose your UI Language? "
 Write-Host "Press 1 for German"
 Write-Host "Press 2 for English"
 
-while($inputValid -ne 1 -and $inputValid -ne 2 -and $inputValid -ne 3 -and $inputValid -ne 4){
+while($inputValid -ne 1 -and $inputValid -ne 2){
     $inputValid =  read-host -Prompt "Enter number"
     if ($inputValid -eq 1) {
             Write-Host "UI and Region details will be changed in German"	
@@ -115,17 +115,17 @@ Write-Host "________________________________________________________"
 Write-Host "Choose your keyboard Language? "
 Write-Host "Press 1 for German"
 Write-Host "Press 2 for English"
-while($inputValid -ne 1 -and $inputValid -ne 2){
-    $inputValid =  read-host -Prompt "Enter number"
-    if ($inputValid -eq 1) {
+while($inputValid2 -ne 1 -and $inputValid2 -ne 2){
+    $inputValid2 =  read-host -Prompt "Enter number"
+    if ($inputValid2 -eq 1) {
             Write-Host "Keyboard will be changed in German"	
 		Set-WinUserLanguageList de-DE -Force
     }
-    if ($inputValid -eq 2) {
+    if ($inputValid2 -eq 2) {
             Write-Host "Keyboard will be changed in English"
 		Set-WinUserLanguageList en-US -Force
     }
-    if($inputValid -ne 1 -and $inputValid -ne 2){
+    if($inputValid2 -ne 1 -and $inputValid2 -ne 2){
         Write-Host "Please enter 1 or 2"
     }
 }
@@ -150,28 +150,28 @@ Write-Host "Press 1 for Sales"
 Write-Host "Press 2 for HR"
 Write-Host "Press 3 for Operations"
 Write-Host "Press 4 for System Engineer"
-while($inputValid -ne 1 -and $inputValid -ne 2 -and $inputValid -ne 3 -and $inputValid -ne 4){
-    $inputValid =  read-host -Prompt "Enter number"
-    if ($inputValid -eq 1) {
+while($inputValid3 -ne 1 -and $inputValid3 -ne 2 -and $inputValid3 -ne 3 -and $inputValid3 -ne 4){
+    $inputValid3 =  read-host -Prompt "Enter number"
+    if ($inputValid3 -eq 1) {
             Write-Host "This PC will be customized for Sales"
             choco install -y winscp 7zip telegram hxd git notepadplusplus foxitreader office2019proplus firefox captura ffmpeg winscp microsoft-teams wsus-offline-update-community keepass googlechrome captura ffmpeg webex bitrix24 --ignore-checksum
     }
 
-    if ($inputValid -eq 2) {
+    if ($inputValid3 -eq 2) {
             Write-Host "This PC will be customized for HR"
             choco install -y  winscp 7zip telegram git hxd notepadplusplus foxitreader office2019proplus firefox captura ffmpeg winscp microsoft-teams wsus-offline-update-community keepass googlechrome captura ffmpeg webex bitrix24 --ignore-checksum
     }
 
-    if ($inputValid -eq 3) {
+    if ($inputValid3 -eq 3) {
             Write-Host "This PC will be customized for Operations"
             choco install -y kitty winscp 7zip git winsshterm telegram hxd notepadplusplus office2019proplus foxitreader firefox captura ffmpeg winscp microsoft-teams wsus-offline-update-community keepass googlechrome captura ffmpeg bitrix24 --ignore-checksum
     }
 
-    if ($inputValid -eq 4) {
+    if ($inputValid3 -eq 4) {
             Write-Host "This PC will be customized for System Engineer"
             choco install -y kitty winscp 7zip git winsshterm telegram hxd notepadplusplus office2019proplus  foxitreader firefox captura ffmpeg winscp microsoft-teams wsus-offline-update-community keepass googlechrome captura ffmpeg vmware-workstation-player bitrix24 --ignore-checksum
     }  
-    if($inputValid -ne 1 -and $inputValid -ne 2 -and $inputValid -ne 3 -and $inputValid -ne 4){
+    if($inputValid3 -ne 1 -and $inputValid3 -ne 2 -and $inputValid3 -ne 3 -and $inputValid3 -ne 4){
         Write-Host "Please enter 1,2,3 or 4"
     }
 }
