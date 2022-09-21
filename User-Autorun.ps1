@@ -5,28 +5,29 @@ Write-Host "Choose your UI Language? "
 Write-Host "Press 1 for German"
 Write-Host "Press 2 for English"
 
-while($inputValid -ne 1 -and $inputValid -ne 2 -and $inputValid -ne 3 -and $inputValid -ne 4){
+while($inputValid -ne 1 -and $inputValid -ne 2){
     $inputValid =  read-host -Prompt "Enter number"
     if ($inputValid -eq 1) {
             Write-Host "UI and Region details will be changed in German"	
           	Set-Culture de-DE
-		Set-WinSystemLocale -SystemLocale de-DE
-		Set-WinUILanguageOverride -Language de-DE
-		Set-WinHomeLocation -GeoId 94            
+		    Set-WinSystemLocale -SystemLocale de-DE
+		    Set-WinUILanguageOverride -Language de-DE
+		    Set-WinHomeLocation -GeoId 94            
 
     }
 
     if ($inputValid -eq 2) {
             Write-Host "UI and Region details will be changed in English"
-              Set-Culture en-US
-		Set-WinSystemLocale -SystemLocale en-US
-		Set-WinUILanguageOverride -Language en-US
-		Set-WinHomeLocation -GeoId 244
+            Set-Culture en-US
+		    Set-WinSystemLocale -SystemLocale en-US
+		    Set-WinUILanguageOverride -Language en-US
+		    Set-WinHomeLocation -GeoId 244
     }
     if($inputValid -ne 1 -and $inputValid -ne 2){
         Write-Host "Please enter 1 or 2"
     }
 }
+
 Write-Host "Language is set"
 Start-Sleep -Seconds 3
 Read-Host -Prompt "Press ENTER to continue..."
@@ -34,29 +35,25 @@ Read-Host -Prompt "Press ENTER to continue..."
 
 ### Keyboard Language
 ### Credits to Olli
-
 Write-Host "________________________________________________________"
 Write-Host "Choose your keyboard Language? "
 Write-Host "Press 1 for German"
 Write-Host "Press 2 for English"
-
-
-while($inputValid -ne 1 -and $inputValid -ne 2){
-    $inputValid =  read-host -Prompt "Enter number"
-    if ($inputValid -eq 1) {
+while($inputValid2 -ne 1 -and $inputValid2 -ne 2){
+    $inputValid2 =  read-host -Prompt "Enter number"
+    if ($inputValid2 -eq 1) {
             Write-Host "Keyboard will be changed in German"	
 		Set-WinUserLanguageList de-DE -Force
     }
-
-    if ($inputValid -eq 2) {
+    if ($inputValid2 -eq 2) {
             Write-Host "Keyboard will be changed in English"
 		Set-WinUserLanguageList en-US -Force
     }
-    if($inputValid -ne 1 -and $inputValid -ne 2){
+    if($inputValid2 -ne 1 -and $inputValid2 -ne 2){
         Write-Host "Please enter 1 or 2"
     }
 }
-Write-Host "Language is set"
+Write-Host "Keyboard is set"
 Start-Sleep -Seconds 3
 Read-Host -Prompt "Press ENTER to continue..."
 
